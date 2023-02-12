@@ -1,0 +1,29 @@
+# jid and password exactly like this
+
+jid = "jid@example.org"
+password = "sOmePa55W0rD"
+
+nick = "ash"
+
+[[rooms]]
+room = "room1@someserver.org"
+nick = "some-other-nick"
+
+# maybe otherserver.net is a "proper" server and you don't want anything said there learned from someserver.org
+# just set their own index so that doesn't happen
+# note: the default for all rooms is index 0, and all rooms currently write to index 0
+
+[[rooms]]
+room = "room2@otherserver.net"
+chain_indices = [1]
+
+[[rooms]]
+room = "room2@otherserver.net"
+# but this room we want written to both of these indices, because another room will use and write to 2
+chain_indices = [1, 2]
+
+[[rooms]]
+room = "room3@otherserver.net"
+chain_indices = [2]
+
+
