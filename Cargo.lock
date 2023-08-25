@@ -37,6 +37,7 @@ dependencies = [
  "dirs",
  "env_logger",
  "futures",
+ "rand",
  "rusqlite",
  "rustkov",
  "serde",

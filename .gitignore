@@ -2,4 +2,5 @@
 **/*.rs.bk
 .idea
 ash.db
+dad.json
 
